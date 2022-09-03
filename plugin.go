@@ -15,6 +15,7 @@ func (p Plugin) Setup(this *plugin.Plugin) error {
 	// Create each command entry. These are passed along to a config, which will either write this data as the default
 	// commands.toml file or, if it already exists, it will read the data from the file into this map. It is then used
 	// to register the commands.
+	// todo: commands should have an associated permission when a permission system is added to saddle
 	commandConfigs := map[string]CommandInfo{
 		"gamemode": {
 			Runnables:   []cmd.Runnable{commands.Gamemode{}},
